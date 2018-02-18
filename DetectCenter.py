@@ -1,5 +1,6 @@
-# Python program for Detection of a 
-# specific color(blue here) using OpenCV with Python
+#Python program for image processing cubes and the switch during the 2018 FRC
+
+#Import the necessary dependencies
 import cv2
 import numpy as np
 from picamera.array import PiRGBArray
@@ -10,7 +11,7 @@ from time import sleep
 import threading
 
 
-#define the camera
+#define the camera, resolution and framerate
 
 cam = PiCamera()
 cam.resolution = (400, 400)
@@ -21,7 +22,8 @@ sleep(0.1)
 
 
  
-# Webcamera no 0 is used to capture the frames
+# Define the ip address of the Robot and initialize the server.
+#Get the three SmartDashboard tables
 cap = cv2.VideoCapture(0)
 ip = "10.46.82.2"
 sd = nt.getTable("SmartDashboard")
@@ -34,33 +36,6 @@ centerY = 225
 
 nt.initialize(server=ip)
 
-'''def detectScaleLights(scene):
-    parameters = cv2.SimpleBlobDetector_Params()
-    parameters.minThreshold = 0
-    parameters.maxThreshold = 255
-    parameters.filterByCircularity = False
-    parameters.filterByArea = True
-    parameters.minArea = 30
-    parameters.maxArea = 50    
-    parameters.filterByArea = False
-    parameters.filterByConvexity = False
-
-    parameters.filterByInertia = False
-    test = scene
-    
-    detector = cv2.SimpleBlobDetector_create(parameters)
-    #grayscale = cv2.cvtColor(test, cv2.COLOR_BGR2GRAY)
-    #cv2.imshow('Test', test)
-    
-    keypoints = detector.detect(test)
-    im_with_keypoints = cv2.drawKeypoints(test,keypoints, np.array([]), (0,255,0), cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-    
-    
-    if keypoints != None:
-        sc.putNumber('View', 1)
-    else:
-        pass
-    return im_with_keypoints'''
 def valueChanged(table, key, value, isNew):
      print("valueChanged: key: '%s'; value: %s; isNew: %s" % (key,value, isNew))
 
