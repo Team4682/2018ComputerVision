@@ -71,13 +71,6 @@ def post(event, x, y, flags, param):
         print(y)
         X = x
         Y = y
-        
-    
-        
-    
-    
-
-
      
 # This drives the program into an infinite loop.
 
@@ -164,7 +157,7 @@ sc.putNumber('Y', centerY)
 s.putNumber('X', centerX)
 s.putNumber('Y', centerY)
 #detectScaleLights()
-'''Thread'''
+'''------------------------------------Thread-------------------------------------------------------------'''
 
 
 import time
