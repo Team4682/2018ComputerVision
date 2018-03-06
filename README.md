@@ -24,3 +24,5 @@ It is meant to detect the Power Cubes, the Scale, and also uses the Adafruit TSC
 
 Programmed by Akli Amrous
 
+If you have any questions, contact Akli or submit a Github Issue
+
